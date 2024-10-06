@@ -6,7 +6,22 @@
  * structures.
  */
 
-#include "md5.h"
+#ifndef MD5_H
+#define MD5_H
+
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#endif
+
+typedef struct {
+    uint64_t size;      // Size of input in bytes
+    uint32_t buffer[4]; // Current accumulation of hash
+    uint8_t input[64];  // Input to be used in the next step
+    uint8_t digest[16]; // Result of algorithm
+} MD5Context;
 
 /*
  * Constants defined by the MD5 algorithm
@@ -15,6 +30,13 @@
 #define B 0xefcdab89
 #define C 0x98badcfe
 #define D 0x10325476
+
+void md5Step(uint32_t *buffer, uint32_t *input);
+void md5String(char *input, size_t len, uint8_t *result);
+void md5Finalize(MD5Context *ctx);
+void md5Init(MD5Context *ctx);
+void md5Update(MD5Context *ctx, uint8_t *input_buffer, size_t input_len);
+uint32_t rotateLeft(uint32_t x, uint32_t n);
 
 static uint32_t S[] = {7,  12, 17, 22, 7,  12, 17, 22, 7,  12, 17, 22, 7,
                        12, 17, 22, 5,  9,  14, 20, 5,  9,  14, 20, 5,  9,
@@ -199,10 +221,10 @@ void md5Step(uint32_t *buffer, uint32_t *input) {
  * Functions that run the algorithm on the provided input and put the digest
  * into result. result should be able to store 16 bytes.
  */
-void md5String(char *input, uint8_t *result) {
+void md5String(char *input, size_t len, uint8_t *result) {
     MD5Context ctx;
     md5Init(&ctx);
-    md5Update(&ctx, (uint8_t *)input, strlen(input));
+    md5Update(&ctx, (uint8_t *)input, len);
     md5Finalize(&ctx);
 
     memcpy(result, ctx.digest, 16);
