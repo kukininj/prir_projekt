@@ -23,7 +23,7 @@ struct search_result check_batch(size_t permutation_number, size_t length,
         //     print_permutation(indices, length);
         // }
 
-        int i = 0;
+        size_t i = 0;
         for (i = 0; i < length; i++) {
             buffer[i] = alphabet[indices[i]];
         }
@@ -69,14 +69,14 @@ struct search_result check_hashes(size_t length, size_t hashes_to_check,
     size_t total_hashes = powl(ALPHABET_SIZE, PASSWORD_LENGTH);
     hashes_to_check = min(total_hashes, hashes_to_check);
     size_t total_checked_hashes = 0;
-    size_t last_checked_hashes = 0;
+    // size_t last_checked_hashes = 0;
 
     struct search_result search_result = {.password = NULL,
                                           .checked_passwords = 0};
 
     volatile int finished = 0;
 
-#pragma omp parallel for num_threads(4) shared(total_checked_hashes, finished)
+#pragma omp parallel for shared(total_checked_hashes, finished)
     for (size_t n = 0; n <= hashes_to_check / BATCH_SIZE; n++) {
         if (finished == 1) {
             continue;
@@ -98,30 +98,35 @@ struct search_result check_hashes(size_t length, size_t hashes_to_check,
             printf("finished: %p\n", search_result.password);
         }
 
-        if (omp_get_thread_num() == 0) {
-            update_progress(progress_context, total_checked_hashes);
-        }
-        if (omp_get_thread_num() == 0 &&
-            total_checked_hashes - last_checked_hashes > CHECKPOINT_COUNT) {
-            last_checked_hashes = total_checked_hashes;
-            print_progres(progress_context);
-        }
+        // if (omp_get_thread_num() == 0) {
+        //     update_progress(progress_context, total_checked_hashes);
+        // }
+        // if (omp_get_thread_num() == 0 &&
+        //     total_checked_hashes - last_checked_hashes > CHECKPOINT_COUNT) {
+        //     last_checked_hashes = total_checked_hashes;
+        //     print_progres(progress_context);
+        // }
     }
     update_progress(progress_context, total_checked_hashes);
 
     return search_result;
 }
 
-void run_tests() {
+struct test_result {
+    double time_taken;
+    size_t total_checked_hashes;
+};
+
+void run_tests(struct test_result *result) {
     struct progress_context progress_context = {0};
 
     gettimeofday(&progress_context.start, NULL);
     gettimeofday(&progress_context.last_check, NULL);
 
-    struct search_result search_result =
+    // struct search_result search_result =
         check_hashes(PASSWORD_LENGTH, PERMUTATIONS_TO_CHECK, &progress_context);
 
-    printf("matching password is: %s\n", search_result.password);
+    // printf("matching password is: %s\n", search_result.password);
 
     size_t total_checked_hashes = progress_context.total_checked_passwords;
 
@@ -131,8 +136,10 @@ void run_tests() {
 
     double time_taken =
         (end.tv_sec - start.tv_sec) + (end.tv_usec - start.tv_usec) / 1e6;
-    printf("checked %zu hashes, in %f seconds.\n", total_checked_hashes,
-           time_taken);
+    //printf("checked %zu hashes, in %f seconds.\n", total_checked_hashes,
+    //      time_taken);
+    result->time_taken = time_taken;
+    result->total_checked_hashes = total_checked_hashes;
 }
 
 #endif
