@@ -14,11 +14,11 @@
 
 #define PASSWORD_LENGTH 12
 #define ALPHABET_SIZE 26
-#define BATCH_SIZE 16
+#define BATCH_SIZE 65535
 const char *alphabet = "abcdefghijklmnopqrstuvwxyz";
 const uint8_t TEST_HASH[16] = {0x0, 0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7,
                                0x8, 0x9, 0xa, 0xb, 0xc, 0xd, 0xe, 0xf};
-const size_t PERMUTATIONS_TO_CHECK = 1ul << 20;
+const size_t PERMUTATIONS_TO_CHECK = 1ul << 28;
 const size_t CHECKPOINT_COUNT = 1ul << 16;
 
 struct search_result {
@@ -41,7 +41,7 @@ void update_progress(struct progress_context *context,
 }
 
 void print_permutation(size_t *indeces, size_t len) {
-    for (int i = 0; i < len; i++) {
+    for (size_t i = 0; i < len; i++) {
         printf("%c", alphabet[indeces[i]]);
     }
     printf("; thread: %d\n", omp_get_thread_num());

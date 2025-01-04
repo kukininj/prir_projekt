@@ -1,2 +1,5 @@
 *.o
 md5
+.cache
+compile_commands.json
+.vscode
