@@ -2,7 +2,7 @@
 #ifndef globals
 #define globals
 
-#include <omp.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -34,6 +34,11 @@ struct progress_context {
     size_t total_checked_passwords;
 };
 
+struct test_result {
+    double time_taken;
+    size_t total_checked_hashes;
+};
+
 void update_progress(struct progress_context *context,
                             size_t check_count) {
     context->last_checked_passwords = context->total_checked_passwords;
@@ -44,7 +49,6 @@ void print_permutation(size_t *indeces, size_t len) {
     for (size_t i = 0; i < len; i++) {
         printf("%c", alphabet[indeces[i]]);
     }
-    printf("; thread: %d\n", omp_get_thread_num());
 }
 
 void print_hash(uint8_t *p) {

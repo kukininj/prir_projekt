@@ -1,10 +1,5 @@
-
-#ifndef openmp_impl
-#define openmp_impl
-
 #include "globals.h"
 #include "md5.c"
-#include <bits/pthreadtypes.h>
 #include <math.h>
 #include <omp.h>
 #include <stdio.h>
@@ -19,10 +14,6 @@ struct search_result check_batch(size_t permutation_number, size_t length,
     char buffer[PASSWORD_LENGTH + 1] = {0};
     size_t checked_hashes = 0;
     while (checked_hashes < hashes_to_check) {
-        // if (omp_get_thread_num() == 0) {
-        //     print_permutation(indices, length);
-        // }
-
         size_t i = 0;
         for (i = 0; i < length; i++) {
             buffer[i] = alphabet[indices[i]];
@@ -85,11 +76,6 @@ struct search_result check_hashes(size_t length, size_t hashes_to_check,
         size_t permutation_number = BATCH_SIZE * n;
         size_t to_check = min(BATCH_SIZE, hashes_to_check - permutation_number);
 
-        // printf("starting thread %d, total_hashes: %zu, hashes_to_check: "
-        //        "%zu, perm_nr: %zu\n",
-        //        omp_get_thread_num(), total_hashes, to_check,
-        //        permutation_number);
-
         search_result = check_batch(permutation_number, length, to_check);
 #pragma omp atomic
         total_checked_hashes += search_result.checked_passwords;
@@ -112,11 +98,6 @@ struct search_result check_hashes(size_t length, size_t hashes_to_check,
     return search_result;
 }
 
-struct test_result {
-    double time_taken;
-    size_t total_checked_hashes;
-};
-
 void run_tests(struct test_result *result) {
     struct progress_context progress_context = {0};
 
@@ -124,7 +105,7 @@ void run_tests(struct test_result *result) {
     gettimeofday(&progress_context.last_check, NULL);
 
     // struct search_result search_result =
-        check_hashes(PASSWORD_LENGTH, PERMUTATIONS_TO_CHECK, &progress_context);
+    check_hashes(PASSWORD_LENGTH, PERMUTATIONS_TO_CHECK, &progress_context);
 
     // printf("matching password is: %s\n", search_result.password);
 
@@ -136,10 +117,23 @@ void run_tests(struct test_result *result) {
 
     double time_taken =
         (end.tv_sec - start.tv_sec) + (end.tv_usec - start.tv_usec) / 1e6;
-    //printf("checked %zu hashes, in %f seconds.\n", total_checked_hashes,
-    //      time_taken);
+    // printf("checked %zu hashes, in %f seconds.\n", total_checked_hashes,
+    //       time_taken);
     result->time_taken = time_taken;
     result->total_checked_hashes = total_checked_hashes;
 }
 
-#endif
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        fprintf(stderr, "Specify threads number\n");
+        return 1;
+    }
+
+    int threads = atoi(argv[1]);
+    omp_set_num_threads(threads);
+
+    struct test_result result = {0};
+    run_tests(&result);
+    double time = result.time_taken;
+    printf("1x%d,%lf,%zu\n", threads, time, result.total_checked_hashes);
+}
