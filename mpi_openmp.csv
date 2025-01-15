@@ -1,962 +1,161 @@
-mpicc -Wall -Wextra -O3 -o md5 mpi_openmp.c -lm -fopenmp
 threads,time,hashes_checked
-threads: 2
-threads: 2
-2x2,2.222213,16777216
-threads: 2
-threads: 2
-2x2,2.301117,16777216
-threads: 2
-threads: 2
-2x2,2.289409,16777216
-threads: 2
-threads: 2
-2x2,2.297373,16777216
-threads: 2
-threads: 2
-2x2,2.301249,16777216
-threads: 2
-threads: 2
-2x2,2.269226,16777216
-threads: 2
-threads: 2
-2x2,2.236326,16777216
-threads: 2
-threads: 2
-2x2,2.273303,16777216
-threads: 2
-threads: 2
-2x2,2.291481,16777216
-threads: 2
-threads: 2
-2x2,2.217555,16777216
-threads: 4
-threads: 4
-2x4,2.279686,16777216
-threads: 4
-threads: 4
-2x4,2.332915,16777216
-threads: 4
-threads: 4
-2x4,2.170361,16777216
-threads: 4
-threads: 4
-2x4,2.187029,16777216
-threads: 4
-threads: 4
-2x4,2.281355,16777216
-threads: 4
-threads: 4
-2x4,2.229783,16777216
-threads: 4
-threads: 4
-2x4,2.289921,16777216
-threads: 4
-threads: 4
-2x4,2.101802,16777216
-threads: 4
-threads: 4
-2x4,2.079472,16777216
-threads: 4
-threads: 4
-2x4,2.043668,16777216
-threads: 6
-threads: 6
-2x6,2.084180,16777216
-threads: 6
-threads: 6
-2x6,2.089098,16777216
-threads: 6
-threads: 6
-2x6,2.085950,16777216
-threads: 6
-threads: 6
-2x6,2.082947,16777216
-threads: 6
-threads: 6
-2x6,2.060193,16777216
-threads: 6
-threads: 6
-2x6,2.073825,16777216
-threads: 6
-threads: 6
-2x6,2.072768,16777216
-threads: 6
-threads: 6
-2x6,2.074443,16777216
-threads: 6
-threads: 6
-2x6,2.313838,16777216
-threads: 6
-threads: 6
-2x6,2.451570,16777216
-threads: 8
-threads: 8
-2x8,2.354214,16777216
-threads: 8
-threads: 8
-2x8,2.059125,16777216
-threads: 8
-threads: 8
-2x8,1.979267,16777216
-threads: 8
-threads: 8
-2x8,2.421832,16777216
-threads: 8
-threads: 8
-2x8,2.684823,16777216
-threads: 8
-threads: 8
-2x8,2.634411,16777216
-threads: 8
-threads: 8
-2x8,2.871202,16777216
-threads: 8
-threads: 8
-2x8,2.787485,16777216
-threads: 8
-threads: 8
-2x8,2.646353,16777216
-threads: 8
-threads: 8
-2x8,2.537754,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-4x2,0.621028,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-4x2,0.727950,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-4x2,0.666443,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-4x2,1.465059,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-4x2,2.138752,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-4x2,2.383365,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-4x2,1.796720,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-4x2,1.517510,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-4x2,0.591186,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-4x2,0.577201,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-4x4,0.312456,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-4x4,0.330239,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-4x4,0.330027,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-4x4,0.325640,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-4x4,0.315869,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-4x4,0.363641,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-4x4,0.318825,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-4x4,0.350628,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-4x4,0.317425,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-4x4,0.330086,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-4x6,0.258345,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-4x6,0.262890,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-4x6,0.286719,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-4x6,0.302515,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-4x6,0.290656,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-4x6,0.809759,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-4x6,0.359578,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-4x6,0.298919,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-4x6,0.298255,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-4x6,0.308471,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-4x8,0.263549,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-4x8,0.253886,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-4x8,0.262599,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-4x8,0.279366,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-4x8,0.258739,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-4x8,0.268156,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-4x8,0.266730,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-4x8,0.258073,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-4x8,0.292793,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-4x8,0.277673,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-6x2,0.452075,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-6x2,0.409525,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-6x2,0.379958,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-6x2,0.432615,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-6x2,0.397502,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-6x2,0.410909,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-6x2,0.400609,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-6x2,0.394271,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-6x2,0.396964,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-6x2,0.406662,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-6x4,0.309591,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-6x4,0.253573,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-6x4,0.303357,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-6x4,0.304184,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-6x4,0.298410,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-6x4,0.298158,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-6x4,0.308020,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-6x4,0.278434,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-6x4,0.298780,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-6x4,0.248904,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-6x6,0.276183,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-6x6,0.282270,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-6x6,0.265968,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-6x6,0.289031,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-6x6,0.258326,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-6x6,0.282732,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-6x6,0.265543,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-6x6,0.283730,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-6x6,0.296367,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-6x6,0.290622,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-6x8,0.247322,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-6x8,0.272190,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-6x8,0.282692,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-6x8,0.270072,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-6x8,0.276874,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-6x8,0.276189,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-6x8,0.281099,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-6x8,0.295044,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-6x8,0.282151,16711681
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-6x8,0.288527,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-8x2,0.358189,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-8x2,0.337343,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-8x2,0.340108,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-8x2,0.341353,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-8x2,0.353584,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-8x2,0.339152,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-8x2,0.328896,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-8x2,0.343004,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-8x2,0.348272,16777216
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-threads: 2
-8x2,0.348279,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-8x4,0.290657,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-8x4,0.303707,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-8x4,0.301479,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-8x4,0.295605,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-8x4,0.280135,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-8x4,0.305525,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-8x4,0.308027,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-8x4,0.300335,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-8x4,0.308864,16777216
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-threads: 4
-8x4,0.312281,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-8x6,0.307900,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-8x6,0.268650,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-8x6,0.265129,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-8x6,0.279995,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-8x6,0.282871,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-8x6,0.281374,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-8x6,0.281541,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-8x6,0.292409,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-8x6,0.301763,16777216
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-threads: 6
-8x6,0.291919,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-8x8,0.289309,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-8x8,0.295161,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-8x8,0.288335,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-8x8,0.284632,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-8x8,0.286652,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-8x8,0.293131,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-8x8,0.294370,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-8x8,0.282988,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-8x8,0.272466,16777216
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-threads: 8
-8x8,0.284178,16777216
+2x2,1.708512,16777216
+2x2,1.698144,16777216
+2x2,1.783534,16777216
+2x2,1.885668,16777216
+2x2,2.030984,16777216
+2x2,1.899325,16777216
+2x2,1.946030,16777216
+2x2,1.989843,16777216
+2x2,2.003086,16777216
+2x2,2.027326,16777216
+2x4,1.678576,16777216
+2x4,1.693580,16777216
+2x4,1.689643,16777216
+2x4,1.817329,16777216
+2x4,2.034818,16777216
+2x4,2.037711,16777216
+2x4,2.036609,16777216
+2x4,2.052781,16777216
+2x4,2.029062,16777216
+2x4,2.036028,16777216
+2x6,2.043649,16777216
+2x6,2.020654,16777216
+2x6,2.072497,16777216
+2x6,2.024283,16777216
+2x6,2.030869,16777216
+2x6,1.956228,16777216
+2x6,2.019833,16777216
+2x6,2.036969,16777216
+2x6,1.988641,16777216
+2x6,1.859454,16777216
+2x8,1.949807,16777216
+2x8,1.899912,16777216
+2x8,1.906818,16777216
+2x8,1.887286,16777216
+2x8,1.916398,16777216
+2x8,1.860502,16777216
+2x8,1.834729,16777216
+2x8,2.000236,16777216
+2x8,2.006827,16777216
+2x8,2.017713,16777216
+4x2,0.537216,16777216
+4x2,0.516149,16777216
+4x2,0.474880,16777216
+4x2,0.571477,16777216
+4x2,0.520822,16777216
+4x2,0.514144,16777216
+4x2,0.516654,16777216
+4x2,0.507700,16777216
+4x2,0.485652,16777216
+4x2,0.536995,16777216
+4x4,0.346000,16777216
+4x4,0.352748,16777216
+4x4,0.354192,16777216
+4x4,0.331640,16777216
+4x4,0.323381,16777216
+4x4,0.438108,16777216
+4x4,0.389116,16777216
+4x4,0.301296,16777216
+4x4,0.334558,16777216
+4x4,0.334407,16777216
+4x6,0.341586,16711681
+4x6,0.323565,16777216
+4x6,0.319835,16777216
+4x6,0.323103,16777216
+4x6,0.338059,16777216
+4x6,0.339907,16777216
+4x6,0.320040,16777216
+4x6,0.323299,16777216
+4x6,0.249708,16777216
+4x6,0.335829,16777216
+4x8,0.281817,16777216
+4x8,0.270761,16777216
+4x8,0.264694,16777216
+4x8,0.280929,16777216
+4x8,0.275293,16777216
+4x8,0.282386,16777216
+4x8,0.287023,16777216
+4x8,0.286102,16777216
+4x8,0.284110,16711681
+4x8,0.296374,16711681
+6x2,0.361739,16777216
+6x2,0.387352,16777216
+6x2,0.392440,16777216
+6x2,0.360598,16777216
+6x2,0.389648,16777216
+6x2,0.395943,16777216
+6x2,0.399845,16777216
+6x2,0.381136,16777216
+6x2,0.354809,16777216
+6x2,0.397871,16777216
+6x4,0.276297,16777216
+6x4,0.323813,16777216
+6x4,0.262177,16777216
+6x4,0.244500,16777216
+6x4,0.246758,16777216
+6x4,0.247477,16777216
+6x4,0.267680,16777216
+6x4,0.327370,16777216
+6x4,0.260055,16777216
+6x4,0.264947,16777216
+6x6,0.287303,16777216
+6x6,0.270391,16777216
+6x6,0.249795,16711681
+6x6,0.238104,16777216
+6x6,0.251709,16777216
+6x6,0.269311,16777216
+6x6,0.238589,16777216
+6x6,0.276047,16777216
+6x6,0.237530,16777216
+6x6,0.249369,16777216
+6x8,0.264432,16777216
+6x8,0.257724,16777216
+6x8,0.238298,16777216
+6x8,0.239163,16711681
+6x8,0.257430,16777216
+6x8,0.252731,16777216
+6x8,0.245755,16777216
+6x8,0.266144,16777216
+6x8,0.254017,16777216
+6x8,0.245748,16777216
+8x2,0.306802,16777216
+8x2,0.303484,16777216
+8x2,0.307429,16777216
+8x2,0.330006,16777216
+8x2,0.334381,16777216
+8x2,0.300674,16777216
+8x2,0.338148,16777216
+8x2,0.320687,16777216
+8x2,0.329663,16777216
+8x2,0.330530,16777216
+8x4,0.276179,16777216
+8x4,0.258269,16777216
+8x4,0.259019,16777216
+8x4,0.261422,16777216
+8x4,0.266800,16777216
+8x4,0.266115,16777216
+8x4,0.268823,16777216
+8x4,0.259179,16777216
+8x4,0.258397,16777216
+8x4,0.271520,16777216
+8x6,0.244875,16777216
+8x6,0.262012,16777216
+8x6,0.247703,16777216
+8x6,0.257536,16777216
+8x6,0.277338,16777216
+8x6,0.254885,16777216
+8x6,0.263232,16777216
+8x6,0.258479,16777216
+8x6,0.273900,16777216
+8x6,0.225163,16777216
+8x8,0.239549,16777216
+8x8,0.242006,16777216
+8x8,0.266551,16777216
+8x8,0.232351,16777216
+8x8,0.265713,16777216
+8x8,0.241839,16777216
+8x8,0.260741,16777216
+8x8,0.250890,16777216
+8x8,0.258646,16777216
+8x8,0.256290,16777216

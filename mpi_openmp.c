@@ -119,7 +119,6 @@ int main(int argc, char *argv[]) {
     }
 
     int threads = atoi(argv[1]);
-    printf("threads: %d\n", threads);
     omp_set_num_threads(threads);
 
     MPI_Init(&argc, &argv);

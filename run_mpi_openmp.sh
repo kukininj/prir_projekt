@@ -1,6 +1,6 @@
 #!/bin/bash
 
-make mpi_openmp
+make mpi_openmp > /dev/null
 
 echo "threads,time,hashes_checked"
 
