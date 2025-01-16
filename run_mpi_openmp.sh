@@ -6,7 +6,7 @@ echo "threads,time,hashes_checked"
 
 for n in 2 4 6 8
 do
-  for m in 2 4 6 8
+  for m in 1 2 4 6 8
   do
     for i in {1..10}
     do
